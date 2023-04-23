@@ -1,9 +1,9 @@
 const Web3 = require('web3');
 const HDWalletProvider = require('@truffle/hdwallet-provider');
 
-const privateKey = 'YOUR_PRIVATE_KEY'; // Replace with your own private key
+const privateKey = 'e204dc56a40b6f2888206fa0c352ae14dbd232e01792c0c519f3662aef5d3b48'; // Replace with your own private key
 const infuraUrl = 'https://rpc.thundercore.com'; // Replace with your own Infura URL
-const contractAddress = '0x...'; // Replace with the address of your Thunder Token contract
+const contractAddress = '0x6e938eFb27744378CE5eB322BCEd228Bb33B505a'; // Replace with the address of your Thunder Token contract
 
 const web3 = new Web3(new HDWalletProvider(privateKey, infuraUrl));
 const contract = new web3.eth.Contract(abi, contractAddress);
