@@ -4,8 +4,8 @@
   "description": "A simple API for creating Thunder Token accounts",
   "main": "index.js",
   "dependencies": {
-    "web3": "^1.5.2"
-  },
+  "bitcore-lib-dgb": "^1.0.2"
+},
   "scripts": {
     "start": "index.js"
   },
