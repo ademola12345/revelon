@@ -1,1 +1,1 @@
-web: node api/send-tokens.js
+web: node index.js
