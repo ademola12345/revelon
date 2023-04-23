@@ -7,7 +7,7 @@
     "web3": "^1.5.2"
   },
   "scripts": {
-    "start": "node index.js"
+    "start": "index.js"
   },
   "author": "Your Name",
   "license": "MIT"
