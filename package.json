@@ -1,15 +1,14 @@
 {
-  "name": "api-vercel",
+  "name": "my-thunder-token-api",
   "version": "1.0.0",
-  "description": "",
+  "description": "A simple API for creating Thunder Token accounts",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
-    "express": "^4.18.1"
-  }
+    "web3": "^1.5.2"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Your Name",
+  "license": "MIT"
 }
