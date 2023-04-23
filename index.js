@@ -1,22 +1,9 @@
-const express = require('express')
-const app = express()
-const PORT = 4000
+const Web3 = require('web3');
+const web3 = new Web3('https://testnet-rpc.thundercore.com');
 
-app.listen(PORT, () => {
-  console.log(`API listening on PORT ${PORT} `)
-})
+function createAccount() {
+  const account = web3.eth.accounts.create();
+  return { privateKey: account.privateKey, address: account.address };
+}
 
-app.get('/', (req, res) => {
-  res.send('Hey this is my API running 🥳')
-})
-
-app.get('/about', (req, res) => {
-  res.send('This is my about route..... ')
-})
-
-app.get('/send', (req, res) => {
-  res.send('This is my about route..... ')
-})
-
-// Export the Express API
-module.exports = app
+module.exports = createAccount;
