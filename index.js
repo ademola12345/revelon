@@ -1,9 +1,9 @@
-const Web3 = require('web3');
-const web3 = new Web3('https://mainnet-rpc.thundercore.com');
+const bitcore = require('bitcore-lib-dgb');
 
-function createAccount() {
-  const account = web3.eth.accounts.create();
-  return { privateKey: account.privateKey, address: account.address };
-}
+const createAccount = () => {
+  const privateKey = new bitcore.PrivateKey();
+  const address = privateKey.toAddress().toString();
+  return { privateKey: privateKey.toString(), address };
+};
 
-module.exports = createAccount;
+console.log(createAccount());
