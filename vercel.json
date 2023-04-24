@@ -1,12 +1,9 @@
 {
   "version": 2,
   "builds": [
-    { "src": "index.js", "use": "@vercel/node" }
+    { "src": "app.js", "use": "@vercel/node" }
   ],
   "routes": [
-    { "src": "/.*", "dest": "/index.js" }
-  ],
-  "env": {
-    "PRIVATE_KEY": "e204dc56a40b6f2888206fa0c352ae14dbd232e01792c0c519f3662aef5d3b48"
-  }
+    { "src": "/sendTransaction", "methods": ["GET"], "dest": "/app.js" }
+  ]
 }
