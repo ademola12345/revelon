@@ -1,17 +1,13 @@
 {
-  "name": "thunder-token-api",
+  "name": "bnb-api",
   "version": "1.0.0",
-  "description": "Serverless API to send Thunder Token transactions on the mainnet",
-  "main": "index.js",
+  "description": "API for sending Binance Smart Chain transactions",
+  "main": "app.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node app.js"
   },
   "dependencies": {
-    "@truffle/hdwallet-provider": "^1.0.47",
-    "ethers": "^5.4.4"
-  },
-  "devDependencies": {},
-  "engines": {
-    "node": "14.x"
+    "express": "^4.17.1",
+    "web3": "^1.4.0"
   }
 }
