@@ -1,13 +1,15 @@
 {
-  "name": "bnb-api",
+  "name": "api-vercel",
   "version": "1.0.0",
-  "description": "API for sending Binance Smart Chain transactions",
-  "main": "home.js",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "start": "node home.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1",
-    "web3": "^1.4.0"
+    "express": "^4.18.1"
   }
 }
