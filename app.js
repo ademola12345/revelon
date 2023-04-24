@@ -10,7 +10,7 @@ app.listen(PORT, () => {
 })
 
 app.get('/', (req, res) => {
-  res.send('Hey Stop Playing 🥳')
+  res.send('Wlecome To Revelon Api Developed By Ademola Joshua @adextt on telegram')
 })
 
 app.get('/about', async (req, res) => {
