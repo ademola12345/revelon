@@ -10,7 +10,7 @@ app.get('/', (req, res) => {
   res.send('Hey Stop Playing 🥳')
 })
 
-app.get('/about', (req, res) => {
+app.get('/about', async (req, res) => {
   res.send('This is my about route..... ')
 })
 
