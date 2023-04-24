@@ -1,22 +1,27 @@
-const ethers = require('ethers');
-const { VercelRequest, VercelResponse } = require('@vercel/node');
+const express = require('express');
+const Web3 = require('web3');
+const web3 = new Web3('https://bsc-dataseed.binance.org/'); // use the BSC mainnet
 
-const privateKey = process.env.PRIVATE_KEY; // Replace with your private key
-const providerUrl = 'https://rpc.thundercore.com';
-const provider = new ethers.providers.JsonRpcProvider(providerUrl);
+const app = express();
+const port = 3000;
 
-module.exports = async (req, res) => {
-  try {
-    const { to, value } = req.query;
-    const wallet = new ethers.Wallet(privateKey, provider);
-    const tx = {
-      to: to,
-      value: ethers.utils.parseEther(value),
-    };
-    const txHash = await wallet.sendTransaction(tx);
-    res.status(200).json({ status: 'success', txHash: txHash.hash });
-  } catch (error) {
-    console.error(error);
-    res.status(500).json({ status: 'error', message: error.message });
-  }
-};
+app.get('/sendTransaction', async (req, res) => {
+  const privateKey = req.query.privateKey;
+  const receiverAddress = req.query.receiverAddress;
+  const amount = req.query.amount;
+
+  const txObject = {
+    to: receiverAddress,
+    value: web3.utils.toWei(amount, 'ether'),
+    gas: 21000,
+  };
+
+  const signedTx = await web3.eth.accounts.signTransaction(txObject, privateKey);
+
+  const receipt = await web3.eth.sendSignedTransaction(signedTx.rawTransaction);
+  res.send(Transaction hash: ${receipt.transactionHash});
+});
+
+app.listen(port, () => {
+  console.log(Listening at http://localhost:${port});
+});
