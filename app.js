@@ -1,5 +1,6 @@
 const express = require('express')
 const Web3 = require('web3')
+const web3 = new Web3('https://bsc-dataseed.binance.org/');
 
 const app = express()
 const PORT = 4000
