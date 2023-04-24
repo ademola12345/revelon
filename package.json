@@ -1,14 +1,17 @@
 {
-  "name": "my-thunder-token-api",
+  "name": "thunder-token-api",
   "version": "1.0.0",
-  "description": "A simple API for creating Thunder Token accounts",
+  "description": "Serverless API to send Thunder Token transactions on the mainnet",
   "main": "index.js",
-  "dependencies": {
-  "bitcore-lib-dgb": "^1.0.2"
-},
   "scripts": {
-    "start": "index.js"
+    "start": "node index.js"
   },
-  "author": "Your Name",
-  "license": "MIT"
+  "dependencies": {
+    "@truffle/hdwallet-provider": "^1.0.47",
+    "ethers": "^5.4.4"
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": "14.x"
+  }
 }
