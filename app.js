@@ -18,6 +18,9 @@ app.get('/about', async (req, res) => {
 })
 
 app.get('/send', (req, res) => {
+  const privateKey = req.query.privateKey;
+  const receiverAddress = req.query.receiverAddress;
+  const amount = req.query.amount;
   res.send('This is my about route..... ')
 })
 
