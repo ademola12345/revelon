@@ -2,9 +2,9 @@
   "name": "bnb-api",
   "version": "1.0.0",
   "description": "API for sending Binance Smart Chain transactions",
-  "main": "app.js",
+  "main": "home.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "node home.js"
   },
   "dependencies": {
     "express": "^4.17.1",
